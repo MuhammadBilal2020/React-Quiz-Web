@@ -2,80 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+body {
     background: url('assets/360_F_439133763_FrLdhZsd5aGC23r9ATARuKJBr8ifZjIe.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     color: white;
     font-size: 1.3rem;
 }
-.quiz{
+
+.quiz {
+    max-width: 90%;
     width: 50rem;
     margin: 2rem auto;
-    /* background-color: rgb(244, 218, 222); */
-box-shadow: 1px -1px 10px 1px rgb(111, 111, 111) ;    
+    padding: 2rem;
+    box-shadow: 1px -1px 10px 1px rgb(111, 111, 111);
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border-radius: 8px;
 }
 
-
-li{
+li {
     margin-top: 1rem;
-   
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-li:hover{
+li:hover {
     background-color: #021e45b3;
 }
 
+li label {
+    padding-left: 0.5rem;
+    font-size: 1.1rem;
+}
 
-
-
-
-
-
-
-.next{
+.next {
     width: 5rem;
-    padding: .4rem .6rem;   
-    margin-top: 1rem ;
+    padding: 0.4rem 0.6rem;
+    margin-top: 1rem;
     background-color: blue;
+    color: white;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-:hover.next{
-background-color: rgba(0, 0, 255, 0.332);
-padding: .5rem .7rem; 
-width: 5.5rem;
-
+.next:hover {
+    background-color: rgba(0, 0, 255, 0.6);
 }
 
-
-
-.results{
+.results {
     text-align: center;
-
 }
 
-.complete{
+.complete {
     font-size: 3.5rem;
     color: yellow;
 }
 
-.score{
-margin-top: 2rem;
-font-size: 2rem;
-color: rgb(95, 248, 95);
-}
-
-
-.pass{
-    margin-top:1rem ;
+.score {
+    margin-top: 2rem;
+    font-size: 2rem;
     color: rgb(95, 248, 95);
+}
+
+.pass, .fail {
+    margin-top: 1rem;
     font-size: 2rem;
 }
 
-.fail{
-    margin-top:1rem ;
+.pass {
+    color: rgb(95, 248, 95);
+}
+
+.fail {
     color: red;
-    font-size: 2rem;
 }
