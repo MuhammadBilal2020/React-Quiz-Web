@@ -40,19 +40,27 @@ function App() {
 
   // Next question function
   function next() {
-    if (selectedAnswer === quizData[questionIndex].correctAnswer) {
-      setMarks(marks + 10);
-    } else {
-      console.log("wrong");
+    if (!selectedAnswer) {
+      alert('please select answer')
     }
 
-    if (questionIndex < quizData.length - 1) {
-      setQuestionIndex(questionIndex + 1);
-      shuffleOptions(quizData[questionIndex + 1]); // Shuffle options for the next question
-      setSelectedAnswer(""); // Reset the selected answer
-    } else {
-      setResult(true);
+    else {
+
+      if (selectedAnswer === quizData[questionIndex].correctAnswer) {
+        setMarks(marks + 10);
+      } else {
+        console.log("wrong");
+      }
+
+      if (questionIndex < quizData.length - 1) {
+        setQuestionIndex(questionIndex + 1);
+        shuffleOptions(quizData[questionIndex + 1]); // Shuffle options for the next question
+        setSelectedAnswer(""); // Reset the selected answer
+      } else {
+        setResult(true);
+      }
     }
+
   }
 
   return (
